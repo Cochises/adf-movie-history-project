@@ -1,0 +1,28 @@
+{
+	"name": "tg_proccess_moviehistory",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_proccess_moviehistory",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"p_environment": "Production",
+					"p_file_date": "2024-12-30"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2026-04-03T19:40:00",
+				"timeZone": "Romance Standard Time"
+			}
+		}
+	}
+}

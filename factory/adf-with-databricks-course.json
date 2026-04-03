@@ -1,0 +1,9 @@
+{
+	"name": "adf-with-databricks-course",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "acd02fa4-ad81-4f5f-be9d-85d3c2ba7d78",
+		"tenantId": "ff4fad4c-4dea-462b-91b0-4e1e5c72e764"
+	}
+}
