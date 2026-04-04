@@ -91,7 +91,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"notebookPath": "/Users/soycochises@hotmail.com/databricks-course/movie-history/transformation/01.results_movie_genre_language",
+								"notebookPath": "/Users/soycochises@hotmail.com/movie-history-project/transformation/01.results_movie_genre_language",
 								"baseParameters": {
 									"p_file_date": {
 										"value": "@formatDateTime(pipeline().parameters.p_file_date, 'yyyy-MM-dd')",
@@ -117,7 +117,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"notebookPath": "/Users/soycochises@hotmail.com/databricks-course/movie-history/transformation/02.results_country_prod_company",
+								"notebookPath": "/Users/soycochises@hotmail.com/movie-history-project/transformation/02.results_country_prod_company",
 								"baseParameters": {
 									"p_file_date": {
 										"value": "@formatDateTime(pipeline().parameters.p_file_date, 'yyyy-MM-dd')",
@@ -143,7 +143,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"notebookPath": "/Users/soycochises@hotmail.com/databricks-course/movie-history/transformation/03.results_group_movie_genre",
+								"notebookPath": "/Users/soycochises@hotmail.com/movie-history-project/transformation/03.results_group_movie_genre",
 								"baseParameters": {
 									"p_file_date": {
 										"value": "@formatDateTime(pipeline().parameters.p_file_date, 'yyyy-MM-dd')",
@@ -169,7 +169,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"notebookPath": "/Users/soycochises@hotmail.com/databricks-course/movie-history/transformation/04.results_group_movie_country",
+								"notebookPath": "/Users/soycochises@hotmail.com/movie-history-project/transformation/04.results_group_movie_country",
 								"baseParameters": {
 									"p_file_date": {
 										"value": "@formatDateTime(pipeline().parameters.p_file_date, 'yyyy-MM-dd')",
