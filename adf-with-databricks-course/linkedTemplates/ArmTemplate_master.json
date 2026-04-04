@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-with-databricks-course"
+		},
+		"ls_movie_history_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_movie_history_adls'"
+		},
+		"LS_Databricks_Course_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0321-160349-0ovl9uwi"
+		},
+		"ls_movie_history_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://moviehistorydl.dfs.core.windows.net/"
+		},
+		"tg_proccess_moviehistory_properties_pl_proccess_moviehistory_parameters_p_environment": {
+			"type": "string",
+			"defaultValue": "Production"
+		},
+		"tg_proccess_moviehistory_properties_pl_proccess_moviehistory_parameters_p_file_date": {
+			"type": "string",
+			"defaultValue": "2024-12-30"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-with-databricks-course_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_movie_history_adls_accountKey": {
+						"value": "[parameters('ls_movie_history_adls_accountKey')]"
+					},
+					"LS_Databricks_Course_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('LS_Databricks_Course_properties_typeProperties_existingClusterId')]"
+					},
+					"ls_movie_history_adls_properties_typeProperties_url": {
+						"value": "[parameters('ls_movie_history_adls_properties_typeProperties_url')]"
+					},
+					"tg_proccess_moviehistory_properties_pl_proccess_moviehistory_parameters_p_environment": {
+						"value": "[parameters('tg_proccess_moviehistory_properties_pl_proccess_moviehistory_parameters_p_environment')]"
+					},
+					"tg_proccess_moviehistory_properties_pl_proccess_moviehistory_parameters_p_file_date": {
+						"value": "[parameters('tg_proccess_moviehistory_properties_pl_proccess_moviehistory_parameters_p_file_date')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
